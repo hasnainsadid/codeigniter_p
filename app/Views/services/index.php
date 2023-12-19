@@ -45,7 +45,7 @@
                           <tr>
                             <th> Sl No </th>
                             <th> Service Name </th>
-                            <th> Price </th>
+                            <th> Details </th>
                             <th> Status </th>
                             <th> Action </th>
                           </tr>
@@ -54,34 +54,26 @@
                           <tr>
                             <th> Sl No </th>
                             <th> Service Name </th>
-                            <th> Price </th>
+                            <th> Details </th>
                             <th> Status </th>
                             <th> Action </th>
                           </tr>
                         </tfoot>
                         <tbody>
+                          <?php 
+                          $i = 1;
+                          foreach($services as $item):?>
                           <tr>
-                            <td class="py-1">1</td>
-                            <td> Service 1 </td>
-                            <td> $ 77.99 </td>
+                            <td class="py-1"><?= $i ?></td>
+                            <td> <?= $item['title']?> </td>
+                            <td> <?= $item['details']?> </td>
                             <td>Active</td>
                             <td>
                               <a href="" class="btn btn-info">Edit</a>
                               <a href="" class="btn btn-danger">Delete</a>
                             </td>
                           </tr>
-                            
-                          <tr>
-                            <td class="py-1">1</td>
-                            <td> Service 2 </td>
-                            <td> $ 77.99 </td>
-                            <td>Inactive</td>
-                            <td>
-                              <a href="" class="btn btn-info">Edit</a>
-                              <a href="" class="btn btn-danger">Delete</a>
-                            </td>
-                          </tr>
-
+                          <?php $i++; endforeach?>
                         </tbody>
                       </table>
                     </div>

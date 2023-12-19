@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 $routes->get('packages/', 'PackageController::index');
 $routes->get('packages/create', 'PackageController::create');
+$routes->get('packages/delete/(:num)', 'PackageController::delete/$1');
 $routes->get('booking/', 'BookingController::index');
 $routes->get('services/', 'ServiceController::index');
 $routes->get('services/create', 'ServiceController::create');

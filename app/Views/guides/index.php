@@ -42,13 +42,13 @@
 
                                 </p>
                                 <div class="table-responsive">
-                                    <table class="table table-striped">
+                                    <table class="table table-striped text-center">
                                         <thead>
                                             <tr>
                                                 <th> Sl No </th>
                                                 <th> Guide Name </th>
-                                                <th> kichu ekta </th>
                                                 <th> Image </th>
+                                                <th> Designation </th>
                                                 <th> Status </th>
                                                 <th> Action </th>
                                             </tr>
@@ -57,36 +57,30 @@
                                             <tr>
                                                 <th> Sl No </th>
                                                 <th> Guide Name </th>
-                                                <th> kichu ekta </th>
                                                 <th> Image </th>
+                                                <th> Designation </th>
                                                 <th> Status </th>
                                                 <th> Action </th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
+                                            <?php 
+                                            $i= 1;
+                                            foreach($instructor as $item):
+                                            ?>
                                             <tr>
-                                                <td class="py-1">1</td>
-                                                <td> Guide 1 </td>
-                                                <td> details of guides or others </td>
-                                                <td>guide1 image</td>
-                                                <td>Active</td>
+                                                <td class="py-1"><?= $i?></td>
+                                                <td> <?= $item['name'] ?> </td>
+                                                <td><?= $item['img'] ?></td>
+                                                <td><?= $item['designation'] ?></td>
+                                                <td><?= $item['status'] ?></td>
                                                 <td>
                                                     <a href="" class="btn btn-info">Edit</a>
                                                     <a href="" class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
 
-                                            <tr>
-                                                <td class="py-1">1</td>
-                                                <td> Guide 2 </td>
-                                                <td> details of guides or others </td>
-                                                <td>guide2 image</td>
-                                                <td>Inactive</td>
-                                                <td>
-                                                    <a href="" class="btn btn-info">Edit</a>
-                                                    <a href="" class="btn btn-danger">Delete</a>
-                                                </td>
-                                            </tr>
+                                            <?php $i++; endforeach;?>
 
                                         </tbody>
                                     </table>

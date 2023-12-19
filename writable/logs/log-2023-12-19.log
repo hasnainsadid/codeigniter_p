@@ -1,0 +1,70 @@
+CRITICAL - 2023-12-19 09:39:48 --> Undefined variable: packages
+in APPPATH\Views\packages\index.php on line 69.
+ 1 APPPATH\Views\packages\index.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: packages', 'D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\packages\\index.php', 69, [])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\packages\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('packages/index', [], true)
+ 5 APPPATH\Controllers\PackageController.php(17): view('packages/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PackageController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\public\\index.php')
+CRITICAL - 2023-12-19 09:40:04 --> Undefined variable: packages
+in APPPATH\Views\packages\index.php on line 69.
+ 1 APPPATH\Views\packages\index.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: packages', 'D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\packages\\index.php', 69, [])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\packages\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('packages/index', [], true)
+ 5 APPPATH\Controllers\PackageController.php(17): view('packages/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PackageController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\public\\index.php')
+CRITICAL - 2023-12-19 09:40:46 --> Undefined index: Upload_path
+in APPPATH\Views\packages\index.php on line 78.
+ 1 APPPATH\Views\packages\index.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Upload_path', 'D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\packages\\index.php', 78, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\packages\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('packages/index', [], true)
+ 5 APPPATH\Controllers\PackageController.php(17): view('packages/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PackageController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\public\\index.php')
+CRITICAL - 2023-12-19 09:58:29 --> Undefined variable: services
+in APPPATH\Views\services\index.php on line 65.
+ 1 APPPATH\Views\services\index.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: services', 'D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\services\\index.php', 65, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\services\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('services/index', [], true)
+ 5 APPPATH\Controllers\ServiceController.php(21): view('services/index')
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\ServiceController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ServiceController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\public\\index.php')
+CRITICAL - 2023-12-19 10:34:04 --> Undefined index: status
+in APPPATH\Views\guides\index.php on line 76.
+ 1 APPPATH\Views\guides\index.php(76): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: status', 'D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\guides\\index.php', 76, [...])
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\app\\Views\\guides\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('guides/index', [], true)
+ 5 APPPATH\Controllers\GuideController.php(18): view('guides/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\GuideController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GuideController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\server\\xampp\\htdocs\\wdpf55_ci\\codeigniter_p\\public\\index.php')
+INFO - 2023-12-19 12:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-12-19 12:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

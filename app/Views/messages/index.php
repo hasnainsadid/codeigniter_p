@@ -64,42 +64,23 @@
                                             </tr>
                                         </tfoot>
                                         <tbody>
+                                            <?php
+                                            $i = 1;
+                                            foreach($inquiry as $item):
+                                            ?>
                                             <tr>
-                                                <td class="py-1">1</td>
-                                                <td> Mamun Or Rashid </td>
-                                                <td> Package Discount </td>
-                                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                                <td> Read </td>
+                                                <td class="py-1"><?= $i ?></td>
+                                                <td> <?= $item['name']?> </td>
+                                                <td> <?= $item['subject']?> </td>
+                                                <td><?= $item['message']?></td>
+                                                <td> <?= $item['status']?> </td>
                                                 <td>
                                                     <a href="#" class="btn btn-info">Read</a>
                                                     <a href="#" class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
 
-                                            <tr>
-                                                <td class="py-1">2</td>
-                                                <td> Mamun Or Rashid </td>
-                                                <td> Package Discount </td>
-                                                <td> Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                                                <td> Unread </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-info">Read</a>
-                                                    <a href="#" class="btn btn-danger">Delete</a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="py-1">3</td>
-                                                <td> Mamun Or Rashid </td>
-                                                <td> Package Discount </td>
-                                                <td> Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
-                                                <td> Unread </td>
-                                                <td>
-                                                    <a href="#" class="btn btn-info">Read</a>
-                                                    <a href="#" class="btn btn-danger">Delete</a>
-                                                </td>
-                                            </tr>
-
+                                            <?php $i++; endforeach;?>
                                         </tbody>
                                     </table>
                                 </div>

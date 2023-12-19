@@ -14,11 +14,20 @@ class PackageController extends BaseController
     }
     public function index(){
         $data['packages'] = $this->packages->findAll();
-        return view('packages/index');
+        return view('packages/index', $data);
     }
     
     public function create()
     {
         return view('packages/create');
+    }
+
+    public function delete($p_id)
+    {
+        $this->packages->where('id', $p_id);
+        $this->packages->delete();
+        $session = session();
+        $session->setFlashdata('msg', 'Deleted successfully.');
+        $this->response->redirect('/packages');
     }
 }
