@@ -69,8 +69,8 @@
                             <td> <?= $item['details']?> </td>
                             <td>Active</td>
                             <td>
-                              <a href="" class="btn btn-info">Edit</a>
-                              <a href="" class="btn btn-danger">Delete</a>
+                              <a href="<?= base_url('/services/edit/'.$item['id'])?>" class="btn btn-info">Edit</a>
+                              <a href="<?= base_url('/services/delete/'.$item['id'])?>" class="btn btn-danger">Delete</a>
                             </td>
                           </tr>
                           <?php $i++; endforeach?>

@@ -24,4 +24,12 @@ class ServiceController extends BaseController
     {
         return view('services/create');
     }
+    public function delete($s_id)
+    {
+        $this->services->where('id', $s_id);
+        $this->services->delete();
+        $session = session();
+        $session->getFlashdata('msg', 'Deleted Successfully');
+        $this->response->redirect('/services');
+    }
 }

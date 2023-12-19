@@ -22,4 +22,12 @@ class MessageController extends BaseController
     {
         return view('messages/unread');
     }
+    public function delete($i_id)
+    {
+        $this->inquiry->where('id', $i_id);
+        $this->inquiry->delete();
+        $session = session();
+        $session->setFlashdata('msg', 'Deleted successfully.');
+        $this->response->redirect('/inquiry');
+    }
 }

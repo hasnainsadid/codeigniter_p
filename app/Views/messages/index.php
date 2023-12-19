@@ -75,8 +75,8 @@
                                                 <td><?= $item['message']?></td>
                                                 <td> <?= $item['status']?> </td>
                                                 <td>
-                                                    <a href="#" class="btn btn-info">Read</a>
-                                                    <a href="#" class="btn btn-danger">Delete</a>
+                                                    <a href="<?= base_url('/messages/edit/'.$item['id'])?>" class="btn btn-info">Read</a>
+                                                    <a href="<?= base_url('/messages/delete/'.$item['id'])?>" class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
 

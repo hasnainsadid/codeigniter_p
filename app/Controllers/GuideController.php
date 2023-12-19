@@ -21,4 +21,12 @@ class GuideController extends BaseController
     {
         return view('guides/create');
     }
+    public function delete($g_id)
+    {
+        $this->instructor->where('id', $g_id);
+        $this->instructor->delete();
+        $session = session();
+        $session->setFlashdata('msg', 'Deleted successfully.');
+        $this->response->redirect('/instructor');
+    }
 }
