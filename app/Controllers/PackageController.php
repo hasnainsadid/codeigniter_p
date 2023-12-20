@@ -30,4 +30,29 @@ class PackageController extends BaseController
         $session->setFlashdata('msg', 'Deleted successfully.');
         $this->response->redirect('/packages');
     }
+    public function edit($p_id)
+    {
+        $data = $this->packages->find($p_id);
+        return view('packages/edit', $data);
+    }
+
+    public function update($p_id)
+    {
+        $data = [
+            'title' => $this->request->getVar('title'),
+            'tour_location' => $this->request->getVar('tour_location'),
+            'description' => $this->request->getVar('description'),
+            'cost' => $this->request->getVar('cost'),
+            // 'upload_path' => $this->request->getVar('upload_path'),
+            'status' => $this->request->getVar('status'),
+        ];
+
+        $this->packages->update($p_id, $data);
+
+        $session = session();
+        $session->setFlashdata('msg', "Updated Successfully");
+        $this->response->redirect('/packages');
+    }
+
+
 }

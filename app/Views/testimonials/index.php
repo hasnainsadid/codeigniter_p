@@ -38,7 +38,7 @@
           <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">All Messages</h4>
+                <h4 class="card-title">Testimonials</h4>
                 <?php if (session()->getFlashdata('msg')) : ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                       <?php echo session()->getFlashdata('msg'); ?>
@@ -80,7 +80,7 @@
                           <td> <?= $item['profession'] ?> </td>
                           <td><?= $item['details'] ?></td>
                           <td><?= $item['img'] ?></td>
-                          <td> <?= $item['status'] ?> </td>
+                          <td> <?= ($item['status']) == 1 ? 'Active' : 'Inactive' ?> </td>
                           <td>
                             <a href="<?= base_url('/testimonial/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>
                           </td>

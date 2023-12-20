@@ -55,10 +55,6 @@
                         <input type="text" class="form-control" id="exampleInputCity1" placeholder="Package Price">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputCity1">Rating</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Package Rating">
-                      </div>
-                      <div class="form-group">
                         <label for="exampleInputCity1">Status</label>
                         <input type="text" class="form-control" id="exampleInputCity1" placeholder="Package Status">
                       </div>

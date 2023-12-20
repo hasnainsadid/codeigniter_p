@@ -37,18 +37,18 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add New Blog</h4>
-                    <form class="forms-sample">
+                    <form class="forms-sample" method="post" action="/blog/store" enctype="multipart/form-data" >
                       <div class="form-group">
                         <label for="exampleInputName1">Title</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Blog Title">
+                        <input type="text" name="title" class="form-control" id="exampleInputName1" placeholder="Blog Title">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Details</label>
-                        <input type="type" class="form-control" id="exampleInputEmail3" placeholder="Enter Blog Details">
+                        <input type="type" name="details" class="form-control" id="exampleInputEmail3" placeholder="Enter Blog Details">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword4">Add Image</label>
-                        <input type="file" class="form-control" id="exampleInputPassword4" >
+                        <input type="file" name="img" class="form-control" id="exampleInputPassword4" >
                       </div>
                       
                       <button type="submit" class="btn btn-primary mr-2">Submit</button>

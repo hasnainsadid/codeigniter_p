@@ -5,6 +5,8 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+// View
 $routes->get('/', 'Home::index');
 $routes->get('packages/', 'PackageController::index');
 $routes->get('packages/create', 'PackageController::create');
@@ -26,3 +28,20 @@ $routes->get('guides/delete/(:num)', 'GuideController::delete/$1');
 $routes->get('messages/delete/(:num)', 'MessageController::delete/$1');
 $routes->get('services/delete/(:num)', 'ServiceController::delete/$1');
 $routes->get('testimonial/delete/(:num)', 'TestimonialController::delete/$1');
+
+// edit
+$routes->get('packages/edit/(:num)', 'PackageController::edit/$1');
+$routes->get('blog/edit/(:num)', 'BlogController::edit/$1');
+$routes->get('guides/edit/(:num)', 'GuideController::edit/$1');
+$routes->get('messages/edit/(:num)', 'MessageController::edit/$1');
+$routes->get('services/edit/(:num)', 'ServiceController::edit/$1');
+
+// update
+$routes->post('packages/update/(:num)', 'PackageController::update/$1');
+$routes->post('blog/update/(:num)', 'BlogController::update/$1');
+$routes->post('guides/update/(:num)', 'GuideController::update/$1');
+$routes->post('messages/update/(:num)', 'MessageController::update/$1');
+$routes->post('services/update/(:num)', 'ServiceController::update/$1');
+
+// store
+$routes->post('blog/store', 'BlogController::store');

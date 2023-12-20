@@ -79,9 +79,9 @@
                                                     <td> <?= $item['name'] ?> </td>
                                                     <td><?= $item['img'] ?></td>
                                                     <td><?= $item['designation'] ?></td>
-                                                    <td><?= $item['status'] ?></td>
+                                                    <td><?= ($item['status']) == 1 ? 'Active' : 'Inactive' ?></td>
                                                     <td>
-                                                        <a href="" class="btn btn-info">Edit</a>
+                                                        <a href="<?= base_url('/guides/edit/' . $item['id']) ?>" class="btn btn-info">Edit</a>
                                                         <a href="<?= base_url('/guides/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>
                                                     </td>
                                                 </tr>

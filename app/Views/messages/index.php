@@ -77,7 +77,7 @@
                                                     <td> <?= $item['name'] ?> </td>
                                                     <td> <?= $item['subject'] ?> </td>
                                                     <td><?= $item['message'] ?></td>
-                                                    <td> <?= $item['status'] ?> </td>
+                                                    <td> <?= ($item['status']) == 1 ? 'Active' : 'Inactive' ?> </td>
                                                     <td>
                                                         <a href="<?= base_url('/messages/edit/' . $item['id']) ?>" class="btn btn-info">Read</a>
                                                         <a href="<?= base_url('/messages/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>

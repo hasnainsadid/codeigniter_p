@@ -72,7 +72,6 @@
                                                 <td> Unread </td>
                                                 <td>
                                                     <a href="#" class="btn btn-info">Read</a>
-                                                    <a href="#" class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
 

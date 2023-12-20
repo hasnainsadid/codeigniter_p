@@ -29,4 +29,25 @@ class GuideController extends BaseController
         $session->setFlashdata('msg', 'Deleted successfully.');
         $this->response->redirect('/guides');
     }
+
+    public function edit($g_id)
+    {
+        $data= $this->instructor->find($g_id);
+        return view('guides/edit', $data);
+    }
+
+    public function update($g_id)
+    {
+        $data = [
+            'name' => $this->request->getVar('name'),
+            'designation' => $this->request->getVar('designation'),
+            // 'img' => $this->request->getVar('img'),
+            'status' => $this->request->getVar('status'),
+        ];
+
+        $this->instructor->update($g_id, $data);
+        $session = session();
+        $session->setFlashdata('msg', 'Updated Successfully');
+        $this->response->redirect('/guides');
+    }
 }

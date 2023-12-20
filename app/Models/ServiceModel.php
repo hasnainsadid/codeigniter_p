@@ -12,7 +12,7 @@ class ServiceModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'title', 'details', 'logo'];
+    protected $allowedFields    = ['id', 'title', 'details', 'cost', 'logo', 'status'];
 
     // Dates
     protected $useTimestamps = false;

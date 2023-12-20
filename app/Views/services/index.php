@@ -52,6 +52,7 @@
                         <th> Sl No </th>
                         <th> Service Name </th>
                         <th> Details </th>
+                        <th> Price </th>
                         <th> Status </th>
                         <th> Action </th>
                       </tr>
@@ -61,6 +62,7 @@
                         <th> Sl No </th>
                         <th> Service Name </th>
                         <th> Details </th>
+                        <th> Price </th>
                         <th> Status </th>
                         <th> Action </th>
                       </tr>
@@ -73,7 +75,8 @@
                           <td class="py-1"><?= $i ?></td>
                           <td> <?= $item['title'] ?> </td>
                           <td> <?= $item['details'] ?> </td>
-                          <td>Active</td>
+                          <td> <?= $item['cost'] ?> </td>
+                          <td> <?= ($item['status']) == 1 ? 'Active' : 'Inactive' ?> </td>
                           <td>
                             <a href="<?= base_url('/services/edit/' . $item['id']) ?>" class="btn btn-info">Edit</a>
                             <a href="<?= base_url('/services/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>

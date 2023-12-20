@@ -33,59 +33,29 @@
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
-          <div class="col-lg-12 grid-margin stretch-card">
+          <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Blog</h4>
-                    <div class="table-responsive">
-                      <?php if (session()->getFlashdata('msg')) : ?>
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                          <?php echo session()->getFlashdata('msg'); ?>
-                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        </div>
-                      <?php endif; ?>
-                      <table class="table table-striped text-center">
-                        <thead>
-                          <tr>
-                            <th> Sl No </th>
-                            <th> Image </th>
-                            <th> Title </th>
-                            <th> Details </th>
-                            <th> Status </th>
-                            <th> Action </th>
-                          </tr>
-                        </thead>
-                        <tfoot>
-                          <tr>
-                            <th> Sl No </th>
-                            <th> Image </th>
-                            <th> Title </th>
-                            <th> Details </th>
-                            <th> Status </th>
-                            <th> Action </th>
-                          </tr>
-                        </tfoot>
-                        <tbody>
-                          <?php $i=1; foreach($blogs as $item): ?>
-                          <tr>
-                            <td class="py-1"><?= $i; ?></td>
-                            <td><img src="<?php echo base_url('/assets/uploads/'.$item['img'])?>" width="90px" height="80px" alt=""></td>
-                            <td><?= $item['title']?></td>
-                            <td><?= $item['details']?></td>
-                            <td><?= ($item['status']) == 1 ? 'Active' : 'Inactive' ?></td>
-                            <td>
-                              <a href="<?= base_url('/blog/edit/'.$item['id'])?>" class="btn btn-info">Edit</a>
-                              <a href="<?= base_url('/blog/delete/'.$item['id'])?>" class="btn btn-danger">Delete</a>
-                            </td>
-                          </tr>
-                          <?php $i++; endforeach ;?>
-                        </tbody>
-                      </table>
-                    </div>
+                    <h4 class="card-title">Edit Blog</h4>
+                    <form class="forms-sample" method="post" action="<?= site_url('/blog/update/'. $id)?>">
+                      <div class="form-group">
+                        <label for="exampleInputName1">Title</label>
+                        <input type="text" name="title" class="form-control" id="exampleInputName1" placeholder="Blog Title" value="<?= $title?>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail3">Details</label>
+                        <input type="type" name="details" class="form-control" id="exampleInputEmail3" placeholder="Enter Blog Details" value="<?= $details?>">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword4">Add Image</label>
+                        <input type="file" name="img" class="form-control" id="exampleInputPassword4" value="<?= $img?>">
+                      </div>
+                      
+                      <button type="submit" class="btn btn-primary mr-2">Update</button>
+                    </form>
                   </div>
                 </div>
               </div>
-          </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
           <?=$this->include('./includes/footer'); ?>
