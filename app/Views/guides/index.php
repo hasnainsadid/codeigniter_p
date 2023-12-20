@@ -40,8 +40,14 @@
                             <div class="card-body">
                                 <h4 class="card-title">Guides</h4>
 
-                                </p>
+
                                 <div class="table-responsive">
+                                    <?php if (session()->getFlashdata('msg')) : ?>
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <?php echo session()->getFlashdata('msg'); ?>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                    <?php endif; ?>
                                     <table class="table table-striped text-center">
                                         <thead>
                                             <tr>
@@ -64,23 +70,24 @@
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            <?php 
-                                            $i= 1;
-                                            foreach($instructor as $item):
+                                            <?php
+                                            $i = 1;
+                                            foreach ($instructor as $item) :
                                             ?>
-                                            <tr>
-                                                <td class="py-1"><?= $i?></td>
-                                                <td> <?= $item['name'] ?> </td>
-                                                <td><?= $item['img'] ?></td>
-                                                <td><?= $item['designation'] ?></td>
-                                                <td><?= $item['status'] ?></td>
-                                                <td>
-                                                    <a href="" class="btn btn-info">Edit</a>
-                                                    <a href="<?= base_url('/guides/delete/'.$item['id'])?>" class="btn btn-danger">Delete</a>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td class="py-1"><?= $i ?></td>
+                                                    <td> <?= $item['name'] ?> </td>
+                                                    <td><?= $item['img'] ?></td>
+                                                    <td><?= $item['designation'] ?></td>
+                                                    <td><?= $item['status'] ?></td>
+                                                    <td>
+                                                        <a href="" class="btn btn-info">Edit</a>
+                                                        <a href="<?= base_url('/guides/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>
+                                                    </td>
+                                                </tr>
 
-                                            <?php $i++; endforeach;?>
+                                            <?php $i++;
+                                            endforeach; ?>
 
                                         </tbody>
                                     </table>

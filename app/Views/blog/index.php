@@ -37,9 +37,13 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Blog</h4>
-                    
-                    </p>
                     <div class="table-responsive">
+                      <?php if (session()->getFlashdata('msg')) : ?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                          <?php echo session()->getFlashdata('msg'); ?>
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                      <?php endif; ?>
                       <table class="table table-striped text-center">
                         <thead>
                           <tr>
@@ -47,6 +51,7 @@
                             <th> Title </th>
                             <th> Details </th>
                             <th> Image </th>
+                            <th> Status </th>
                             <th> Action </th>
                           </tr>
                         </thead>
@@ -56,31 +61,24 @@
                             <th> Title </th>
                             <th> Details </th>
                             <th> Image </th>
+                            <th> Status </th>
                             <th> Action </th>
                           </tr>
                         </tfoot>
                         <tbody>
+                          <?php $i=1; foreach($blogs as $item): ?>
                           <tr>
-                            <td class="py-1">1</td>
-                            <td> Service 1 </td>
-                            <td> This is service details </td>
-                            <td>image</td>
-                            <td>
-                              <a href="" class="btn btn-info">Edit</a>
-                              <a href="" class="btn btn-danger">Delete</a>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="py-1">1</td>
-                            <td> Service 2 </td>
-                            <td> $ 77.99 </td>
-                            <td>Inactive</td>
+                            <td class="py-1"><?= $i; ?></td>
+                            <td><?= $item['title']?></td>
+                            <td><?= $item['details']?></td>
+                            <td><?= $item['img']?></td>
+                            <td><?= $item['status']?></td>
                             <td>
                               <a href="<?= base_url('/blog/edit/'.$item['id'])?>" class="btn btn-info">Edit</a>
                               <a href="<?= base_url('/blog/delete/'.$item['id'])?>" class="btn btn-danger">Delete</a>
                             </td>
                           </tr>
-
+                          <?php $i++; endforeach ;?>
                         </tbody>
                       </table>
                     </div>

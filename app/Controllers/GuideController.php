@@ -27,6 +27,6 @@ class GuideController extends BaseController
         $this->instructor->delete();
         $session = session();
         $session->setFlashdata('msg', 'Deleted successfully.');
-        $this->response->redirect('/instructor');
+        $this->response->redirect('/guides');
     }
 }

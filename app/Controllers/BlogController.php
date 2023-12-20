@@ -15,7 +15,8 @@ class BlogController extends BaseController
 
     public function index()
     {
-        return view('blog/index');
+        $data['blogs'] = $this->blog->findAll();
+        return view('blog/index', $data);
     }
     public function create()
     {

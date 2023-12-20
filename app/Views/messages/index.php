@@ -39,9 +39,13 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">All Messages</h4>
-
-                                </p>
                                 <div class="table-responsive">
+                                    <?php if (session()->getFlashdata('msg')) : ?>
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <?php echo session()->getFlashdata('msg'); ?>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        </div>
+                                    <?php endif; ?>
                                     <table class="table table-striped text-center">
                                         <thead>
                                             <tr>
@@ -66,21 +70,22 @@
                                         <tbody>
                                             <?php
                                             $i = 1;
-                                            foreach($inquiry as $item):
+                                            foreach ($inquiry as $item) :
                                             ?>
-                                            <tr>
-                                                <td class="py-1"><?= $i ?></td>
-                                                <td> <?= $item['name']?> </td>
-                                                <td> <?= $item['subject']?> </td>
-                                                <td><?= $item['message']?></td>
-                                                <td> <?= $item['status']?> </td>
-                                                <td>
-                                                    <a href="<?= base_url('/messages/edit/'.$item['id'])?>" class="btn btn-info">Read</a>
-                                                    <a href="<?= base_url('/messages/delete/'.$item['id'])?>" class="btn btn-danger">Delete</a>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td class="py-1"><?= $i ?></td>
+                                                    <td> <?= $item['name'] ?> </td>
+                                                    <td> <?= $item['subject'] ?> </td>
+                                                    <td><?= $item['message'] ?></td>
+                                                    <td> <?= $item['status'] ?> </td>
+                                                    <td>
+                                                        <a href="<?= base_url('/messages/edit/' . $item['id']) ?>" class="btn btn-info">Read</a>
+                                                        <a href="<?= base_url('/messages/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>
+                                                    </td>
+                                                </tr>
 
-                                            <?php $i++; endforeach;?>
+                                            <?php $i++;
+                                            endforeach; ?>
                                         </tbody>
                                     </table>
                                 </div>

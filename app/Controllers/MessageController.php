@@ -28,6 +28,6 @@ class MessageController extends BaseController
         $this->inquiry->delete();
         $session = session();
         $session->setFlashdata('msg', 'Deleted successfully.');
-        $this->response->redirect('/inquiry');
+        $this->response->redirect('/messages');
     }
 }

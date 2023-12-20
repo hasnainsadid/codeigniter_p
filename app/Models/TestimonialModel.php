@@ -4,15 +4,15 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class BlogModel extends Model
+class TestimonialModel extends Model
 {
-    protected $table            = 'blog';
+    protected $table            = 'testimonial';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'title', 'details', 'img', 'status'];
+    protected $allowedFields    = ['id', 'name', 'profession', 'details', 'img', 'status'];
 
     // Dates
     protected $useTimestamps = false;

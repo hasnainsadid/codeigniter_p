@@ -38,20 +38,22 @@
           <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">Services</h4>
-                <div class="table-responsive">
-                  <?php if (session()->getFlashdata('msg')) : ?>
+                <h4 class="card-title">All Messages</h4>
+                <?php if (session()->getFlashdata('msg')) : ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                       <?php echo session()->getFlashdata('msg'); ?>
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                   <?php endif; ?>
+                  <div class="table-responsive">
                   <table class="table table-striped text-center">
                     <thead>
                       <tr>
                         <th> Sl No </th>
-                        <th> Service Name </th>
+                        <th> Sender Name </th>
+                        <th> Profession </th>
                         <th> Details </th>
+                        <th> Image </th>
                         <th> Status </th>
                         <th> Action </th>
                       </tr>
@@ -59,8 +61,10 @@
                     <tfoot>
                       <tr>
                         <th> Sl No </th>
-                        <th> Service Name </th>
+                        <th> Sender Name </th>
+                        <th> Profession </th>
                         <th> Details </th>
+                        <th> Image </th>
                         <th> Status </th>
                         <th> Action </th>
                       </tr>
@@ -68,19 +72,22 @@
                     <tbody>
                       <?php
                       $i = 1;
-                      foreach ($services as $item) : ?>
+                      foreach ($testimonials as $item) :
+                      ?>
                         <tr>
-                          <td class="py-1"><?= $i ?></td>
-                          <td> <?= $item['title'] ?> </td>
-                          <td> <?= $item['details'] ?> </td>
-                          <td>Active</td>
+                          <td class="py-1"><?= $i; ?></td>
+                          <td> <?= $item['name'] ?> </td>
+                          <td> <?= $item['profession'] ?> </td>
+                          <td><?= $item['details'] ?></td>
+                          <td><?= $item['img'] ?></td>
+                          <td> <?= $item['status'] ?> </td>
                           <td>
-                            <a href="<?= base_url('/services/edit/' . $item['id']) ?>" class="btn btn-info">Edit</a>
-                            <a href="<?= base_url('/services/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>
+                            <a href="<?= base_url('/testimonial/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>
                           </td>
                         </tr>
+
                       <?php $i++;
-                      endforeach ?>
+                      endforeach; ?>
                     </tbody>
                   </table>
                 </div>

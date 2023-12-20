@@ -136,7 +136,7 @@
 
         <!-- Testimonial -->
         <li class="nav-item menu-items">
-            <a class="nav-link" data-toggle="collapse" data-target="#" aria-expanded="false">
+            <a class="nav-link" href="/testimonial">
                 <span class="menu-icon">
                     <i class="mdi mdi-laptop"></i>
                 </span>
