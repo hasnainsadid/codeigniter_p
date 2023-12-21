@@ -37,26 +37,33 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add New Packages</h4>
-                    <form class="forms-sample">
+                    <form class="forms-sample" method="post" action="/packages/store" enctype="multipart/form-data">
                       <div class="form-group">
                         <label for="exampleInputName1">Title</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Package Title">
+                        <input type="text" name="title" class="form-control" id="exampleInputName1" placeholder="Package Title">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail3">Location</label>
-                        <input type="type" class="form-control" id="exampleInputEmail3" placeholder="Enter Location">
+                        <input type="text" name="tour_location" class="form-control" id="exampleInputEmail3" placeholder="Enter Location">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputPassword4">Duration</label>
-                        <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Package Duration">
+                        <label for="exampleInputPassword4">Description</label>
+                        <input type="text" name="description" class="form-control" id="exampleInputPassword4" placeholder="Package Description">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputCity1">Price</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Package Price">
+                        <input type="text" name="cost" class="form-control" id="exampleInputCity1" placeholder="Package Price">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputCity1">Status</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Package Status">
+                        <label for="exampleInputPassword4">Add Image</label>
+                        <input type="file" name="upload_path" class="form-control" id="exampleInputPassword4" >
+                      </div>
+                      <div class="form-group">
+                        <label for="select">Status</label>
+                        <select class="form-control" aria-label="Default select example" name="status" id="select">
+                          <option value="1">Active</option>
+                          <option value="0">Inactive</option>
+                        </select>
                       </div>
                       
                       <button type="submit" class="btn btn-primary mr-2">Submit</button>

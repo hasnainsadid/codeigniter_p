@@ -21,6 +21,33 @@ class GuideController extends BaseController
     {
         return view('guides/create');
     }
+    public function store()
+    {
+        
+        $rules = [
+            'name' => 'required|max_length[30]',
+            // 'pimg' => 'uploaded[pimg]|max_size[pimg,2048]|ext_in[photo,jpg,jpeg,png]',
+        ];
+        if (!$this->validate($rules)) {
+            return redirect('guides/create');
+        } else {
+            $img = $this->request->getFile('img');
+            $img_name = $img->getRandomName();
+            $img->move('assets/uploads', $img_name);
+
+            $data = [
+                'name' =>$this->request->getVar("name"),
+                'designation' =>$this->request->getVar("designation"),
+                'status' =>$this->request->getVar("status"),
+                'img' => $img_name,
+            ];
+            
+            $this->instructor->insert($data);
+            $session = session();
+            $session->setFlashdata('msg', 'Successfully Added');
+            return $this->response->redirect('/guides');
+        }
+    }
     public function delete($g_id)
     {
         $this->instructor->where('id', $g_id);

@@ -41,6 +41,7 @@ class BlogController extends BaseController
             $data = [
                 'title' =>$this->request->getVar("title"),
                 'details' =>$this->request->getVar("details"),
+                'status' =>$this->request->getVar("status"),
                 'img' => $img_name,
             ];
             //  print_r($data);

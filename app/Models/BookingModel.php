@@ -6,13 +6,13 @@ use CodeIgniter\Model;
 
 class BookingModel extends Model
 {
-    protected $table            = 'bookings';
+    protected $table            = 'book_list';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = ['id', 'name', 'email', 'package_id', 'status', 'schedule', 'date_created'];
 
     // Dates
     protected $useTimestamps = false;

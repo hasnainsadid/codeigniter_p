@@ -37,22 +37,25 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add New Guide</h4>
-                    <form class="forms-sample">
+                    <form class="forms-sample" method="post" action="/instructor/store" enctype="multipart/form-data">
                       <div class="form-group">
                         <label for="exampleInputName1">Guide Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Guide Name">
+                        <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Guide Name">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputEmail3">Kichu ekta</label>
-                        <input type="type" class="form-control" id="exampleInputEmail3" placeholder="Kichu ekta...">
+                        <label for="exampleInputEmail3">Designation</label>
+                        <input type="type" name="designation" class="form-control" id="exampleInputEmail3" placeholder="Designation">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword4">Add Image</label>
-                        <input type="file" class="form-control" id="exampleInputPassword4" >
+                        <input type="file" name="img" class="form-control" id="exampleInputPassword4" >
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputCity1">Status</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Guide Status">
+                        <label for="select">Status</label>
+                        <select class="form-control" aria-label="Default select example" name="status" id="select">
+                          <option value="1">Active</option>
+                          <option value="0">Inactive</option>
+                        </select>
                       </div>
                       
                       <button type="submit" class="btn btn-primary mr-2">Submit</button>

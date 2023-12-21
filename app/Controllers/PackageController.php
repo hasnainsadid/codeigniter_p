@@ -22,6 +22,36 @@ class PackageController extends BaseController
         return view('packages/create');
     }
 
+    public function store()
+    {
+        
+        $rules = [
+            'title' => 'required|max_length[30]',
+            // 'pimg' => 'uploaded[pimg]|max_size[pimg,2048]|ext_in[photo,jpg,jpeg,png]',
+        ];
+        if (!$this->validate($rules)) {
+            return redirect('packages/create');
+        } else {
+            $img = $this->request->getFile('upload_path');
+            $img_name = $img->getRandomName();
+            $img->move('assets/uploads', $img_name);
+
+            $data = [
+                'title' => $this->request->getVar('title'),
+                'tour_location' => $this->request->getVar('tour_location'),
+                'description' => $this->request->getVar('description'),
+                'cost' => $this->request->getVar('cost'),
+                'status' =>$this->request->getVar("status"),
+                'upload_path' => $img_name,
+            ];
+
+            $this->packages->insert($data);
+            $session = session();
+            $session->setFlashdata('msg', 'Successfully Added');
+            return $this->response->redirect('/packages');
+        }
+    }
+
     public function delete($p_id)
     {
         $this->packages->where('id', $p_id);

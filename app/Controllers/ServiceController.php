@@ -24,6 +24,36 @@ class ServiceController extends BaseController
     {
         return view('services/create');
     }
+
+    public function store()
+    {
+        
+        $rules = [
+            'title' => 'required|max_length[30]',
+            // 'pimg' => 'uploaded[pimg]|max_size[pimg,2048]|ext_in[photo,jpg,jpeg,png]',
+        ];
+        if (!$this->validate($rules)) {
+            return redirect('blog/create');
+        } else {
+            // $img = $this->request->getFile('img');
+            // $img_name = $img->getRandomName();
+            // $img->move('assets/uploads', $img_name);
+
+            $data = [
+                'title' =>$this->request->getVar("title"),
+                'details' =>$this->request->getVar("details"),
+                'status' =>$this->request->getVar("status"),
+                'cost' =>$this->request->getVar("cost"),
+                // 'status' =>$this->request->getVar("status"),
+                // 'img' => $img_name,
+            ];
+            //  print_r($data);
+            $this->services->insert($data);
+            $session = session();
+            $session->setFlashdata('msg', 'Successfully Added');
+            return $this->response->redirect('/services');
+        }
+    }
     public function delete($s_id)
     {
         $this->services->where('id', $s_id);

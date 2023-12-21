@@ -50,9 +50,14 @@
                         <label for="exampleInputPassword4">Add Image</label>
                         <input type="file" name="img" class="form-control" id="exampleInputPassword4" >
                       </div>
-                      
+                      <div class="form-group">
+                        <label for="select">Status</label>
+                        <select class="form-control" aria-label="Default select example" name="status" id="select">
+                          <option value="1">Active</option>
+                          <option value="0">Inactive</option>
+                        </select>
+                      </div>
                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                      <button class="btn btn-dark">Cancel</button>
                     </form>
                   </div>
                 </div>

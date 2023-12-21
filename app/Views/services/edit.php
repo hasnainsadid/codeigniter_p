@@ -55,7 +55,6 @@
                         <input type="text" name="status" value="<?= $status?>" class="form-control" id="exampleInputCity1">
                       </div>
                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                      <button class="btn btn-dark">Cancel</button>
                     </form>
                   </div>
                 </div>

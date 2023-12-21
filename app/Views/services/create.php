@@ -37,21 +37,28 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Add New Services</h4>
-                    <form class="forms-sample">
+                    <form class="forms-sample" method="post" action="/services/store" enctype="multipart/form-data">
                       <div class="form-group">
                         <label for="exampleInputName1">Service Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Service Name">
+                        <input type="text" name="title" class="form-control" id="exampleInputName1" placeholder="Service Name">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Service Details</label>
+                        <!-- <input type="text" class="form-control" id="exampleInputName1" placeholder="Service Name"> -->
+                        <textarea name="details" class="form-control" placeholder="Service Details"></textarea>
                       </div>
                       <div class="form-group">
                         <label for="exampleInputCity1">Price</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Price">
+                        <input type="text" name="cost" class="form-control" id="exampleInputCity1" placeholder="Price">
                       </div>
                       <div class="form-group">
-                        <label for="exampleInputCity1">Status</label>
-                        <input type="text" class="form-control" id="exampleInputCity1" placeholder="Status">
+                        <label for="select">Status</label>
+                        <select class="form-control" aria-label="Default select example" name="status" id="select">
+                          <option value="1">Active</option>
+                          <option value="0">Inactive</option>
+                        </select>
                       </div>
                       <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                      <button class="btn btn-dark">Cancel</button>
                     </form>
                   </div>
                 </div>

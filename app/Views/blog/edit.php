@@ -50,7 +50,10 @@
                         <label for="exampleInputPassword4">Add Image</label>
                         <input type="file" name="img" class="form-control" id="exampleInputPassword4" value="<?= $img?>">
                       </div>
-                      
+                      <select name="status">
+                        <option value="1">Active</option>
+                        <option value="0">Inactive</option>
+                      </select>
                       <button type="submit" class="btn btn-primary mr-2">Update</button>
                     </form>
                   </div>

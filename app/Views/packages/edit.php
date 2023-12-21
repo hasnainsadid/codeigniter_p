@@ -48,7 +48,7 @@
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword4">Description</label>
-                        <input type="text" name="description" class="form-control" id="exampleInputPassword4" placeholder="Package Duration" value="<?= $description?>">
+                        <input type="text" name="description" class="form-control" id="exampleInputPassword4" placeholder="Package Description" value="<?= $description?>">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputCity1">Price</label>

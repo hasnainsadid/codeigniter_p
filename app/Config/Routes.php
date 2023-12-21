@@ -23,6 +23,7 @@ $routes->get('testimonial/', 'TestimonialController::index');
 
 // delete:
 $routes->get('packages/delete/(:num)', 'PackageController::delete/$1');
+$routes->get('booking/delete/(:num)', 'BookingController::delete/$1');
 $routes->get('blog/delete/(:num)', 'BlogController::delete/$1');
 $routes->get('guides/delete/(:num)', 'GuideController::delete/$1');
 $routes->get('messages/delete/(:num)', 'MessageController::delete/$1');
@@ -44,4 +45,7 @@ $routes->post('messages/update/(:num)', 'MessageController::update/$1');
 $routes->post('services/update/(:num)', 'ServiceController::update/$1');
 
 // store
+$routes->post('packages/store', 'PackageController::store');
 $routes->post('blog/store', 'BlogController::store');
+$routes->post('instructor/store', 'GuideController::store');
+$routes->post('services/store', 'ServiceController::store');
