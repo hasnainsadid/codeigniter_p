@@ -48,6 +48,7 @@
                         <th> Sl No </th>
                         <th> Customer Name </th>
                         <th> Customer Email </th>
+                        <th> Customer Phone </th>
                         <th> Package Name </th>
                         <th> Booking Date </th>
                         <th> Journey Date </th>
@@ -60,6 +61,7 @@
                         <th> Sl No </th>
                         <th> Customer Name </th>
                         <th> Customer Email </th>
+                        <th> Customer Phone </th>
                         <th> Package Name </th>
                         <th> Booking Date </th>
                         <th> Journey Date </th>
@@ -74,13 +76,14 @@
                           <td class="py-1"><?= $i ?></td>
                           <td> <?= $item['name'] ?> </td>
                           <td> <?= $item['email'] ?> </td>
-                          <td> <?= $item['package_id'] ?> </td>
+                          <td> <?= $item['phone_no'] ?> </td>
+                          <td> <?= $item['title'] ?> </td>
                           <td> <?= $item['date_created'] ?> </td>
                           <td> <?= $item['schedule'] ?> </td>
-                          <td> <?= $item['status'] ?> </td>
+                          <td> <?= $item['status'] == 0 ? 'Pending' : 'Confirmed' ?> </td>
                           <td>
-                            <a href="<?= base_url('/booking/edit/' . $item['id']) ?>" class="btn btn-info">Edit</a>
-                            <a href="<?= base_url('/booking/delete/' . $item['id']) ?>" class="btn btn-danger">Delete</a>
+                            <a href="<?= base_url('/booking/edit/'.$item['id']) ?>" class="btn btn-info">Edit</a>
+                            <a href="<?= base_url('/booking/delete/'.$item['id']) ?>" class="btn btn-danger">Delete</a>
                           </td>
                         </tr>
                       <?php $i++;

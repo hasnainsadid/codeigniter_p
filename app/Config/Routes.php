@@ -7,19 +7,19 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 // View
-$routes->get('/', 'Home::index');
-$routes->get('packages/', 'PackageController::index');
-$routes->get('packages/create', 'PackageController::create');
-$routes->get('booking/', 'BookingController::index');
-$routes->get('services/', 'ServiceController::index');
-$routes->get('services/create', 'ServiceController::create');
-$routes->get('blog/', 'BlogController::index');
-$routes->get('blog/create/', 'BlogController::create');
-$routes->get('guides/', 'GuideController::index');
-$routes->get('guides/create', 'GuideController::create');
-$routes->get('messages/', 'MessageController::index');
-$routes->get('messages/unread/', 'MessageController::unread');
-$routes->get('testimonial/', 'TestimonialController::index');
+$routes->get('/', 'Home::index', ['filter' => 'authGuard']);
+$routes->get('packages/', 'PackageController::index', ['filter' => 'authGuard']);
+$routes->get('packages/create', 'PackageController::create', ['filter' => 'authGuard']);
+$routes->get('booking/', 'BookingController::index', ['filter' => 'authGuard']);
+$routes->get('services/', 'ServiceController::index', ['filter' => 'authGuard']);
+$routes->get('services/create', 'ServiceController::create', ['filter' => 'authGuard']);
+$routes->get('blog/', 'BlogController::index', ['filter' => 'authGuard']);
+$routes->get('blog/create/', 'BlogController::create', ['filter' => 'authGuard']);
+$routes->get('guides/', 'GuideController::index', ['filter' => 'authGuard']);
+$routes->get('guides/create', 'GuideController::create', ['filter' => 'authGuard']);
+$routes->get('messages/', 'MessageController::index', ['filter' => 'authGuard']);
+$routes->get('messages/unread/', 'MessageController::unread', ['filter' => 'authGuard']);
+$routes->get('testimonial/', 'TestimonialController::index', ['filter' => 'authGuard']);
 
 // delete:
 $routes->get('packages/delete/(:num)', 'PackageController::delete/$1');
@@ -49,3 +49,8 @@ $routes->post('packages/store', 'PackageController::store');
 $routes->post('blog/store', 'BlogController::store');
 $routes->post('instructor/store', 'GuideController::store');
 $routes->post('services/store', 'ServiceController::store');
+
+// auth routh
+$routes->get('signin', 'SigninController::index');
+$routes->post('login', 'SigninController::login');
+$routes->get('logout', 'SigninController::logout');

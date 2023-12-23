@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\BookingModel;
 
+
+
 class BookingController extends BaseController
 {
     private $booking;
@@ -15,21 +17,9 @@ class BookingController extends BaseController
     }
     public function index()
     {
+        $this->booking->join('packages', 'packages.id = book_list.package_id');
         $data['booking'] = $this->booking->findAll();
         return view('booking/index', $data);
-    }
-
-    public function create()
-    {
-
-    }
-    public function store()
-    {
-
-    }
-    public function edit()
-    {
-
     }
 
     public function delete($b_id)
